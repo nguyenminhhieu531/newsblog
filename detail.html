@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>NewsBlog</title>
+  <link rel="icon" href="./assets/images/logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/js/toastify-js/toastify.css">
+  <link rel="stylesheet" href="assets/css/style-starter.css">
+  <link rel="stylesheet" href="css/my-style.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="w3l-header">
+    <div class="container">
+      <!--/nav-->
+      <nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-sm-3 px-0">
+        <a class="navbar-brand" href="index.html">
+          <span class="fa fa-newspaper-o"></span> NewsBlog</a>
+        <!-- if logo is image enable this   
+						<a class="navbar-brand" href="#index.html">
+							<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+						</a> -->
+
+
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <span class="fa icon-expand fa-bars"></span>
+          <span class="fa icon-close fa-times"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <nav class="mx-auto">
+            <div class="search-bar">
+              <form class="search" action="search.html" method="GET">
+                <input type="search" class="search__input" name="keyword" placeholder="Tìm kiếm tại đây"
+                  onload="equalWidth()" required>
+                <span class="fa fa-search search__icon"></span>
+              </form>
+            </div>
+          </nav>
+          <ul class="navbar-nav" id="main-menu">
+            <!-- content from api -->
+          </ul>
+        </div>
+        <!-- toggle switch for light and dark theme -->
+        <div class="mobile-position">
+          <nav class="navigation">
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox">
+                <div class="mode-container">
+                  <i class="gg-sun"></i>
+                  <i class="gg-moon"></i>
+                </div>
+              </label>
+            </div>
+          </nav>
+        </div>
+        <!-- //toggle switch for light and dark theme -->
+    </div>
+    </nav>
+    <!--//nav-->
+  </header>
+  <!-- //header -->
+  <!-- single post -->
+  <section class="text-11 py-5" id="test-article">
+    <div class="text11 py-lg-5 py-md-4">
+      <div class="container">
+        <div class="blog-title px-md-5">
+          <h3 class="title-big" id="article-title">Create an Art that shows the beauty in everyone’s ideas of flaws.
+          </h3>
+          <ul class="blog-list">
+            <li>
+              <p> Posted on <strong id="article-publish-date">July 11, 2020</strong></p>
+            </li>
+            <li>
+              <p> By <a href="#author"><strong id="article-author">Charlotte mia</strong></a></p>
+            </li>
+            <li>
+              <p> Published in <a href="#"><strong id="article-category">Fashion</strong></a></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="image mb-sm-5 mb-4 text-center">
+        <img src="assets/images/blogsingle.jpg" id="article-thumb" alt="" class="img-fluid radius-image-full">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="text11-content">
+              <div id="article-content">
+              </div>
+              <div class="social-share-blog mt-5">
+                <ul class="column3 tags m-0 p-0">
+                  <li>
+                    <p class="m-0 mr-sm-4 mr-2">Tags :</p>
+                  </li>
+                  <li><a href="#url" class="btn-small">Fashion</a></li>
+                  <li><a href="#url" class="btn-small">Beauty</a></li>
+
+                </ul>
+                <ul class="column3 social m-0 p-0">
+                  <li>
+                    <p class="m-0 mr-sm-4 mr-2">Share this post :</p>
+                  </li>
+                  <li><a href="#facebook" class="facebook"><span class="fa fa-facebook-square"></span></a>
+                  </li>
+                  <li><a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a></li>
+                  <li><a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a></li>
+                  <li><a href="#envelope" class="mail"><span class="fa fa-envelope"></span></a></li>
+                </ul>
+              </div>
+              <div class="new-posts clearfix" id="prev-next-article">
+                <a class="prev-post pull-left" id="prev-article" href="#prev"><span class="fa fa-arrow-left" aria-hidden="true"></span>
+                  Previous Post</a>
+                <a class="next-post pull-right" id="next-article" href="#next">Next Post <span class="fa fa-arrow-right"
+                    aria-hidden="true"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-side col-lg-4 col-md-12 col-sm-12 mt-lg-0 mt-5">
+            <aside class="sidebar">
+              <!-- Author card Widget-->
+              <!-- <div class="sidebar-widget sidebar-blog-category">
+                <div class="author">
+                  <div class="sidebar-title">
+                    <h4>About author</h4>
+                  </div>
+                  <div class="author-detalis">
+                    <a href="#author" class="author-image"><img src="assets/images/a2.jpg" alt="author image"
+                        class="img-fluid"></a>
+                    <div class="author-info">
+                      <a href="#author-name" class="author-name">Isabella</a>
+                      <a href="#follow" class="btn btn-outline-primary">Follow </a>
+                    </div>
+                  </div>
+                  <p class="mt-2">I am a Fashion designer, Makeup artist, and Blog
+                    writer.</p>
+                </div>
+              </div> -->
+              <!-- //Author card Widget-->
+
+
+              <!-- Popular Post Widget-->
+              <div class="sidebar-widget popular-posts">
+                <div class="sidebar-title">
+                  <h4>Bài viết liên quan</h4>
+                </div>
+                <div id="related-article">
+                  <article class="post">
+                    <figure class="post-thumb"><img src="assets/images/beauty8.jpg" alt=""></figure>
+                    <div class="text"><a href="blog-single.html">
+                        4 Ways to feel Great during the Cold Weather</a>
+                    </div>
+                    <div class="post-info">June 14, 2020</div>
+                  </article>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+
+        <div class="row mt-5">
+          <div class="col-lg-8">
+            <div class="leave-comment-form" id="comment">
+              <h3 class="aside-title">Gửi bình luận</h3>
+              <p id="message-comment"></p>
+              <form action="#" method="post">
+                <div class="input-grids">
+                  <div class="form-group">
+                    <input type="text" name="Name" class="form-control" id="comment-name" placeholder="Tên của bạn"
+                      required="">
+                  </div>
+                  <div class="form-group">
+                    <textarea name="Comment" id="comment-message" class="form-control" placeholder="Nội dung bình luận"
+                      required=""></textarea>
+                  </div>
+                </div>
+                <div class="submit text-right">
+                  <button class="btn btn-style btn-primary" type="button" id="btn-post-comment">Gửi bình luận</a>
+                </div>
+              </form>
+            </div>
+            <div class="comments">
+              <h3 class="aside-title ">Bình luận</h3>
+              <div class="comments-grids" id="comments">
+                <div class="media-grid">
+                  <div class="media">
+                    <a class="comment-img" href="#url"><img src="assets/images/a1.jpg" class="img-responsive"
+                        width="100px" alt="placeholder image"></a>
+                    <div class="media-body comments-grid-right">
+                      <h5>Jack Harry</h5>
+                      <ul class="p-0 comment">
+                        <li class="">July 15th, 2020 at 11:00 am</li>
+                        <li>
+                          <a href="#comment" class="text-primary">Reply</a>
+                        </li>
+                      </ul>
+                      <p>Mattis ut hendrerit non, facilisis eget mauris. Sed ultricies nec purus
+                        quis
+                        tempor. Phasellus ipsum eu nec purus quis tempor dolor set.</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="media-grid">
+                  <div class="media">
+                    <a class="comment-img" href="#url"><img src="assets/images/a2.jpg" class="img-responsive"
+                        width="100px" alt="placeholder image"></a>
+                    <div class="media-body comments-grid-right">
+                      <h5>Charlie</h5>
+                      <ul class="p-0 comment">
+                        <li class="">July 15th, 2020 at 05:45 pm </li>
+                        <li>
+                          <a href="#comment" class="text-primary">Reply</a>
+                        </li>
+                      </ul>
+                      <p>Mattis ut hendrerit non, facilisis eget mauris. Sed ultricies nec purus
+                        quis
+                        tempor. Phasellus eu nec purus quis tempor.
+                      </p>
+                      <div class="media mt-4 mb-0 border-0 px-0 pb-0">
+                        <a class="comment-img" href="#url"><img src="assets/images/a3.jpg" class="img-responsive"
+                            width="100px" alt="placeholder image"></a>
+                        <div class="media-body comments-grid-right">
+                          <h5>Jack Harry</h5>
+                          <ul class="p-0 comment">
+                            <li class="">July 15th, 2020 at 11:00 am</li>
+                            <li>
+                              <a href="#comment" class="text-primary">Reply</a>
+                            </li>
+                          </ul>
+                          <p>Mattis ut hendrerit non, facilisis eget mauris. Sed ultricies nec
+                            purus quis
+                            tempor. dolor set.</p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //single post -->
+
+  <!-- footer-28 block -->
+  <section class="app-footer">
+    <footer class="footer-28 py-5">
+      <div class="footer-bg-layer">
+        <div class="container py-lg-3">
+          <div class="row footer-top-28">
+            <div class="col-lg-4 footer-list-28 copy-right mb-lg-0 mb-sm-5 mt-sm-0 mt-4">
+              <a class="navbar-brand mb-3" href="index.html">
+                <span class="fa fa-newspaper-o"></span> NewsBlog</a>
+              <p class="copy-footer-28"> © 2020. All Rights Reserved. </p>
+              <h5 class="mt-2">Design by <a href="#companyurl">Company</a></h5>
+            </div>
+            <div class="col-lg-8 row">
+              <div class="col-sm-4 col-6 footer-list-28">
+                <h6 class="footer-title-28">Useful links</h6>
+                <ul>
+                  <li><a href="#categories">food blogs</a></li>
+                  <li><a href="#advertise">Advertise with us</a></li>
+                  <li><a href="#authors">Our Authors</a></li>
+                  <li><a href="contact.html">Get in touch</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-4 col-6 footer-list-28">
+                <h6 class="footer-title-28">Categories</h6>
+                <ul>
+                  <li><a href="beauty.html">Beauty</a></li>
+                  <li><a href="fashion.html">Fashion and Style</a></li>
+                  <li><a href="food.html"> Food and Wellness</a></li>
+                  <li><a href="lifestyle.html">Lifestyle</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-4 col-6 footer-list-28 mt-sm-0 mt-4">
+                <h6 class="footer-title-28">Social Media</h6>
+                <ul class="social-icons">
+                  <li class="facebook">
+                    <a href="#facebook"><span class="fa fa-facebook"></span> Facebook</a>
+                  </li>
+                  <li class="twitter"> <a href="#twitter"><span class="fa fa-twitter"></span> Twitter</a></li>
+                  <li class="linkedin"> <a href="#linkedin"><span class="fa fa-linkedin"></span> Linkedin</a></li>
+                  <li class="dribbble"><a href="#dribbble"><span class="fa fa-dribbble"></span> Dribbble</a></li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </footer>
+
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      <span class="fa fa-angle-up"></span>
+    </button>
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- /move top -->
+  </section>
+  <!-- //footer-28 block -->
+
+
+
+  <!-- Template JavaScript -->
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+
+  <!-- disable body scroll which navbar is in active -->
+  <script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+  </script>
+  <!-- disable body scroll which navbar is in active -->
+
+  <!-- courses owlcarousel -->
+  <script src="assets/js/owl.carousel.js"></script>
+
+  <!-- script for testimonials -->
+  <script>
+    $(document).ready(function () {
+      $('.owl-testimonial').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        responsiveClass: true,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        autoplaySpeed: 1000,
+        autoplayHoverPause: false,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          480: {
+            items: 1,
+            nav: false
+          },
+          667: {
+            items: 1,
+            nav: true
+          },
+          1000: {
+            items: 1,
+            nav: true
+          }
+        }
+      })
+    })
+  </script>
+  <!-- //script for testimonials -->
+
+  <!-- bootstrap -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.7/plugin/relativeTime.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.7/locale/vi.js"></script>
+  <script src="js/general.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/detail.js"></script>
+</body>
+
+</html>
